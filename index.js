@@ -8,19 +8,19 @@ var started = false;
 var level = 0;
 
 $(document).keypress(function() {
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
+startEvent();
 });
+
 $(document).click(function() {
+  startEvent();
+});
+function startEvent() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
-});
+}
 
 $(".btn").click(function() {
 
